@@ -24,8 +24,22 @@ public class Asteroid : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
-        
+        timeSinceLastSpawned += Time.deltaTime;
+
+        if (GameControl.instance.gameOver == false && timeSinceLastSpawned >= spawnRate)
+        {
+            timeSinceLastSpawned = 0;
+            float spawnYPosition = Random.Range(asteroidMin, asteroidMax);
+            asteroid[currentAsteroid].transform.position = new Vector2(spawnXPosition, spawnYPosition);
+            currentAsteroid++;
+            if (currentAsteroid >= columnPoolSize)
+            {
+                currentAsteroid = 0;
+            }
+        }
     }
+    */
+
 }
