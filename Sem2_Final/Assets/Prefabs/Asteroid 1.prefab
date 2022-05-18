@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPoolSize: 3
   asteroid1Prefab: {fileID: 2829108545852784742}
-  spawnRate: 4
+  spawnRate: 0
   asteroidMin: -1
   asteroidMax: 5
 --- !u!61 &-4949744386514708478
