@@ -7,7 +7,7 @@ public class MoveShip : MonoBehaviour
     private bool isDead = false;
     private Rigidbody2D rb2d;
     public float upForce = 200f;
-    private Animator anim;
+    //private Animator anim;
     // AudioSource audio; 
 
     // public AudioClip flap;
@@ -34,6 +34,8 @@ public class MoveShip : MonoBehaviour
             }
 
         }
+
+
     }
     void OnCollisionEnter2D()
     {
