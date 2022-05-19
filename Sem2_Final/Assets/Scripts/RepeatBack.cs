@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RepeatBack : MonoBehaviour
 {
-    private Vector2 startPos;
+    private Vector3 startPos;
     public float speed = 20;
     void Start()
     {
@@ -14,9 +14,9 @@ public class RepeatBack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 pos = transform.position;
+        Vector3 pos = transform.position;
 
-        transform.position = new Vector2((pos.y - Time.deltaTime * speed) % (0.32f * 21.914f), 0.03f);
+        transform.position = new Vector3((pos.x - Time.deltaTime * speed) % (0.32f * 21.914f), 0.03f, 0);
     }
 
 }
