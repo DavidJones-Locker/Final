@@ -12,6 +12,12 @@ public class Asteroid : MonoBehaviour
         {
             GameController.instance.PassedAsteroid();
         }
+
+        if (GameController.instance.gameOver == true)
+        {
+            GameController.instance.PassedAsteroid(); 
+              enabled  = false;
+        }
     }
 
     public void PlaySound(AudioClip clip)
