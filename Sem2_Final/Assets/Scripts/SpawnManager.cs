@@ -31,9 +31,5 @@ public class SpawnManager : MonoBehaviour
         Vector2 spawnPos = new Vector2(7,Random.Range(-spawnrangeY, spawnrangeY));
         Instantiate(asteroidPrefabs[asteroidIndex], spawnPos, asteroidPrefabs[asteroidIndex].transform.rotation);
 
-        if (GameController.instance.gameOver == true)
-        {
-            enabled = false;
-        }
     }
 }
