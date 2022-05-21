@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class GameControl : MonoBehaviour
+public class GameController : MonoBehaviour
 {
-    public static GameControl instance;
-    //public GameObject gameOverText;
-    //public bool gameOver = false;
+    public static GameController instance;
+    public GameObject gameOverText;
+    public bool gameOver = false;
     public float scrollSpeed = -1.5f;
-    //public Text scoreText;
+    public Text scoreText;
 
-    //private int score = 0;
+    private int score = 0;
 
-    // public AudioClip scoredClip;
+    //public AudioClip scoredClip;
     // AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -31,17 +33,20 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (gameOver == true && Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
-   public void BirdScored ()
+   public void PassedAsteroid ()
     {
         if (gameOver)
         {
             return;
         }
-score++;
-scoreText.text = "Score:" + score.ToString();
+    score++;
+    scoreText.text = "Score:" + score.ToString();
 
      //   PlaySound(scoredClip);
     }
@@ -52,7 +57,7 @@ scoreText.text = "Score:" + score.ToString();
     gameOver = true;
 }
 
-//  public void PlaySound(AudioClip clip)
+ /*public void PlaySound(AudioClip clip)
 {
     audioSource.PlayOneShot(clip);
 }

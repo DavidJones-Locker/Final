@@ -42,7 +42,15 @@ public class MoveShip : MonoBehaviour
         rb2d.velocity = Vector2.zero;
         isDead = true;
         //  anim.SetTrigger("Die");
-        GameControl.instance.spaceshipCrashed();
+       GameController.instance.SpaceshipCrash();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.GetComponent<MoveShip>() != null)
+        {
+            GameController.instance.PassedAsteroid();
+        }
     }
 
 }
