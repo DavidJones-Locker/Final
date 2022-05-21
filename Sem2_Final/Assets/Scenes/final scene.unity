@@ -4390,8 +4390,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrefabs:
   - {fileID: 8763710694163663001, guid: 53c3ce04e2f60b947972dc9c34c82d12, type: 3}
-  - {fileID: 837367527480447674, guid: f2dd28d63837ff144b969672b235f980, type: 3}
-  - {fileID: 8218068452869776922, guid: 69cacda708e0a1440a8e6b567275aebd, type: 3}
+  - {fileID: 7628958537637091766, guid: d9f5b66911c50354787bcb91abdfd1b9, type: 3}
+  - {fileID: 6360559774230235229, guid: 690dada09db85974bace37394a4e4017, type: 3}
 --- !u!4 &1808180849
 Transform:
   m_ObjectHideFlags: 0
