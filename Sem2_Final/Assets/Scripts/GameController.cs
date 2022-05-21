@@ -34,7 +34,7 @@ public class GameControl : MonoBehaviour
 
     }
 
-  /* public void BirdScored ()
+   public void BirdScored ()
     {
         if (gameOver)
         {
@@ -46,7 +46,7 @@ scoreText.text = "Score:" + score.ToString();
      //   PlaySound(scoredClip);
     }
 
-  //  public void SpaceshipCrash()
+  public void SpaceshipCrash()
     {
     gameOverText.SetActive(true);
     gameOver = true;

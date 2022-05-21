@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] asteroidPrefabs;
-    private float spawnrangeY = 5;
+    private float spawnrangeY = 4.5f;
 
     private float startDelay = 1;
     private float spawnInterval = 1.5f;
@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnRandomAsteroid()
     {
         int asteroidIndex = Random.Range(0, asteroidPrefabs.Length);
-        Vector2 spawnPos = new Vector2(0,Random.Range(-spawnrangeY, spawnrangeY));
+        Vector2 spawnPos = new Vector2(7,Random.Range(-spawnrangeY, spawnrangeY));
         Instantiate(asteroidPrefabs[asteroidIndex], spawnPos, asteroidPrefabs[asteroidIndex].transform.rotation);
     }
 }

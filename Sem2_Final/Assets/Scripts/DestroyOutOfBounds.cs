@@ -4,7 +4,7 @@ using UnityEngine;
 
     public class DestroyOutOfBounds : MonoBehaviour
 {
-    private float leftBound = -20;
+    private float leftBound = -30;
     //private float rightBound = 14;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ using UnityEngine;
     void Update()
     {
         // If an object goes past the players view in the game remove that object
-        if (transform.position.x > leftBound)
+        if (transform.position.x < leftBound)
         {
             Destroy(gameObject);
         }
