@@ -6,18 +6,20 @@ public class MoveShip : MonoBehaviour
 {
     private bool isDead = false;
     private Rigidbody2D rb2d;
-    public float upForce = 200f;
+    public float upForce = 300f;
     //private Animator anim;
-    // AudioSource audio; 
+    AudioSource audioSource; 
 
-    // public AudioClip flap;
+    public AudioClip fly;
+    public AudioClip Crash;
+    public AudioClip Score;
 
     // Start is called before the first frame update
     void Start()
     {
         //  anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
-        // audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class MoveShip : MonoBehaviour
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
 
-                // audio.PlayOneShot(flap);
+                PlaySound(fly);
             }
 
         }
@@ -43,6 +45,8 @@ public class MoveShip : MonoBehaviour
         isDead = true;
         //  anim.SetTrigger("Die");
        GameController.instance.SpaceshipCrash();
+
+        PlaySound(Crash);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -51,6 +55,10 @@ public class MoveShip : MonoBehaviour
         {
             GameController.instance.PassedAsteroid();
         }
-    }
 
+    }
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
 }

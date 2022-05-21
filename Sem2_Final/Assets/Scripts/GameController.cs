@@ -14,8 +14,8 @@ public class GameController : MonoBehaviour
 
     private int score = 0;
 
-    //public AudioClip scoredClip;
-    // AudioSource audioSource;
+    public AudioClip scoredClip;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Awake()
@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
     score++;
     scoreText.text = "Score:" + score.ToString();
 
-     //   PlaySound(scoredClip);
+    PlaySound(scoredClip);
     }
 
   public void SpaceshipCrash()
@@ -57,11 +57,10 @@ public class GameController : MonoBehaviour
     gameOver = true;
 }
 
- /*public void PlaySound(AudioClip clip)
+ public void PlaySound(AudioClip clip)
 {
     audioSource.PlayOneShot(clip);
 }
-  */
 }
 
 

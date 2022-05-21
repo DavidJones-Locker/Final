@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-
+    public AudioClip scoredClip;
+    AudioSource audioSource;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<MoveShip>() != null)
@@ -13,5 +14,9 @@ public class Asteroid : MonoBehaviour
         }
     }
 
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
 
 }
