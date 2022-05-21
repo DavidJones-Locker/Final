@@ -7,7 +7,7 @@ public class MoveShip : MonoBehaviour
     private bool isDead = false;
     private Rigidbody2D rb2d;
     public float upForce = 300f;
-    //private Animator anim;
+    private Animator anim;
     AudioSource audioSource; 
 
     public AudioClip fly;
@@ -17,7 +17,7 @@ public class MoveShip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //  anim = GetComponent<Animator>();
+         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -43,7 +43,7 @@ public class MoveShip : MonoBehaviour
     {
         rb2d.velocity = Vector2.zero;
         isDead = true;
-        //  anim.SetTrigger("Die");
+        anim.SetTrigger("Die");
        GameController.instance.SpaceshipCrash();
 
         PlaySound(Crash);
