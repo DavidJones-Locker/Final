@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97b5ec19a95ac04a853e3f13338099c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoredClip: {fileID: 0}
+  scoredClip: {fileID: 8300000, guid: 67d5411aa136d0741a75f7c7969875cb, type: 3}
 --- !u!1001 &7233570122101262265
 PrefabInstance:
   m_ObjectHideFlags: 0

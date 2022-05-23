@@ -8,15 +8,15 @@ public class Asteroid : MonoBehaviour
     AudioSource audioSource;
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<MoveShip>() != null)
+        if (other.GetComponent<MoveShip1>() != null)
         {
             GameController.instance.PassedAsteroid();
         }
 
         if (GameController.instance.gameOver == true)
         {
-            GameController.instance.PassedAsteroid(); 
-              enabled  = false;
+            GameController.instance.PassedAsteroid();
+            enabled = false;
         }
     }
 

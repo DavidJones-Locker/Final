@@ -28,7 +28,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnRandomAsteroid()
     {
         int asteroidIndex = Random.Range(0, asteroidPrefabs.Length);
-        Vector2 spawnPos = new Vector2(7,Random.Range(-spawnrangeY, spawnrangeY));
+        Vector2 spawnPos = new Vector2(7, Random.Range(-spawnrangeY, spawnrangeY));
         Instantiate(asteroidPrefabs[asteroidIndex], spawnPos, asteroidPrefabs[asteroidIndex].transform.rotation);
 
     }

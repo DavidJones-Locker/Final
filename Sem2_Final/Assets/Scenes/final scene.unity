@@ -4812,12 +4812,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1991964651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f450d8542945ef74d80d3fe5c061121d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a0fd993c8ab0a043adfc9b36967ef5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   upForce: 300
   fly: {fileID: 0}
-  Crash: {fileID: 8300000, guid: dd06039ad93e3af4192002d07a861f46, type: 3}
+  Crash: {fileID: 8300000, guid: cf2a581c7aa8e2a468a2152f7f2560ec, type: 3}
   Score: {fileID: 8300000, guid: 67d5411aa136d0741a75f7c7969875cb, type: 3}
 --- !u!82 &1991964657
 AudioSource:
@@ -4829,7 +4829,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 841e17203f053e644a2105ac14b90545, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b7cbca6efdcf4cb49bd59fc6d0346f4a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
